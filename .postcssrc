@@ -1,11 +1,8 @@
 {
-  "annotation": false,
-  "cascade": true,
-  "map": {
-    inline: true
-  },
-  "use": ["autoprefixer"],
-  "autoprefixer": {
-    browsers: "last 2 versions"
+  "map": "inline",
+  "plugins": {
+    "autoprefixer": {
+      browsers: "last 2 versions"
+    }
   }
 }

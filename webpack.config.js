@@ -1,4 +1,3 @@
-const autoprefixer = require('autoprefixer');
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -65,9 +64,7 @@ module.exports = {
       },
     ],
   },
-  postcss: {
-    plugins: [autoprefixer({ browsers: ['last 2 versions'] })],
-  },
+
   sassLoader: {
     data: '@import "theme/_config.scss";',
     includePaths: [path.resolve(__dirname, './src')],
