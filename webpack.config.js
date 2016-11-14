@@ -1,6 +1,8 @@
+const chalk = require('chalk');
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
 const utility = require('./util');
 
@@ -29,6 +31,10 @@ module.exports = {
       filename: 'team.html',
       template: path.join(__dirname, 'public', 'index.html'),
       chunks: ['team'],
+    }),
+    new ProgressBarPlugin({
+      format: `  build [:bar] ${chalk.green.bold(':percent')} (:elapsed seconds)`,
+      clear: false,
     }),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),

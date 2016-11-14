@@ -67,6 +67,7 @@
     "open": "0.0.5",
     "postcss-load-config": "1.0.0",
     "postcss-loader": "1.0.0",
+    "progress-bar-webpack-plugin": "1.9.0",
     "purifycss-webpack-plugin": "2.0.3",
     "react": "15.3.2",
     "react-addons-css-transition-group": "15.3.2",
@@ -89,7 +90,7 @@
     "style-loader": "0.13.1",
     "url-loader": "0.5.7",
     "vaco-components-library": "1.0.0",
-    "webpack": "1.13.2",
+    "webpack": "^1.13.3",
     "webpack-dev-middleware": "1.8.4",
     "webpack-hot-middleware": "2.13.0"
   },
