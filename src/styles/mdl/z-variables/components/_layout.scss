@@ -1,0 +1,20 @@
+// ==========  Layout  ==========
+
+$layout-nav-color:                                  unquote("rgb(#{$palette-grey-300})") !default;
+
+// Drawer
+$layout-drawer-bg-color:                            unquote("rgb(#{$palette-grey-50})") !default;
+$layout-drawer-border-color:                        unquote("rgb(#{$palette-grey-300})") !default;
+$layout-text-color:                                 unquote("rgb(#{$palette-grey-800})") !default;
+$layout-drawer-navigation-color:                    $palette-grey-600 !default;
+$layout-drawer-navigation-link-active-background:   unquote("rgb(#{$palette-grey-300})") !default;
+$layout-drawer-navigation-link-active-color:        unquote("rgb(#{$color-light-contrast})") !default;
+
+// Header
+$layout-header-bg-color:                            unquote("rgb(#{$color-primary})") !default;
+$layout-header-text-color:                          unquote("rgb(#{$color-primary-contrast})") !default;
+$layout-header-nav-hover-color:                     unquote("rgba(#{$palette-grey-700}, 0.6)") !default;
+$layout-header-tab-text-color:                      unquote("rgba(#{$color-primary-contrast}, 0.6)") !default;
+
+// Tabs
+$layout-header-tab-highlight:                       unquote("rgb(#{$color-accent})") !default;

@@ -6,12 +6,13 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
 const utility = require('./util');
 
+// TODO: Look at re-implementing the SASS loader rules originally used.
+
 module.exports = {
   context: path.join(__dirname),
   devtool: '#source-map',
   entry: {
     index: utility.entryPoint('index'),
-    team: utility.entryPoint('team'),
   },
   output: {
     path: __dirname,
@@ -25,12 +26,6 @@ module.exports = {
       filename: 'index.html',
       template: path.join(__dirname, 'public', 'index.html'),
       chunks: ['index'],
-    }),
-    new HtmlWebpackPlugin({
-      title: 'TEAM.HTML',
-      filename: 'team.html',
-      template: path.join(__dirname, 'public', 'index.html'),
-      chunks: ['team'],
     }),
     new ProgressBarPlugin({
       format: `  build [:bar] ${chalk.green.bold(':percent')} (:elapsed seconds)`,
@@ -56,7 +51,13 @@ module.exports = {
       }, {
         test: /\.css/,
         loaders: ['style', 'css'],
-      }, {
+      },
+      // This works, for some reason....
+      // {
+      //  test: /\.scss$/,
+      //  loaders: ['style', 'css', 'postcss', 'sass'],
+      // },
+      {
         test: /\.scss/,
         loaders: [
           'style',
@@ -64,7 +65,9 @@ module.exports = {
           'postcss',
           'sass?outputStyle=expanded&sourceMap',
         ],
-      }, {
+        include: path.join(__dirname, 'src/styles'),
+       },
+      {
         test: /\.(jpe?g|png|gif|svg)$/i,
         loader: 'file',
       },

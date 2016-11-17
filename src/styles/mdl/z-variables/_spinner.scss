@@ -1,0 +1,15 @@
+// SPINNER
+
+$spinner-size:            28px !default;
+$spinner-stroke-width:    3px !default;
+
+// Amount of circle the arc takes up.
+$spinner-arc-size:        270deg !default;
+
+// Time it takes to expand and contract arc.
+$spinner-arc-time:        1333ms !default;
+
+// How much the start location of the arc should rotate each time.
+$spinner-arc-start-rot:   216deg !default;
+
+$spinner-duration:        360 * $spinner-arc-time / (strip-units($spinner-arc-start-rot + (360deg - $spinner-arc-size)));

@@ -1,0 +1,9 @@
+// ==========  Text fields  ==========
+
+$input-text-background-color:     transparent !default;
+$input-text-label-color:          unquote("rgba(#{$color-black}, 0.26)") !default;
+$input-text-bottom-border-color:  unquote("rgba(#{$color-black}, 0.12)") !default;
+$input-text-highlight-color:      unquote("rgb(#{$color-original-primary})") !default;
+$input-text-disabled-color:       $input-text-bottom-border-color !default;
+$input-text-disabled-text-color:  $input-text-label-color !default;
+$input-text-error-color:          unquote("rgb(#{$palette-red-A700})") !default;

@@ -1,0 +1,72 @@
+@import "../variables";
+@import "../mixins";
+
+.mdl-chip {
+    height: $chip-height;
+    font-family: $preferred_font;
+    line-height: $chip-height;
+    padding: 0 12px;
+    border: 0;
+    border-radius: $chip-height / 2;
+    background-color: $chip-bg-color;
+    display: inline-block;
+    color: $text-color-primary;
+    margin: 2px 0;
+    font-size: 0;
+    white-space: nowrap;
+
+    &__text {
+        font-size: $chip-font-size;
+        vertical-align: middle;
+        display: inline-block;
+    }
+
+    &__action {
+        height: 24px;
+        width: 24px;
+        background: transparent;
+        opacity: 0.54;
+        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+        vertical-align: middle;
+        padding: 0;
+        margin: 0 0 0 4px;
+        font-size: $chip-font-size;
+        text-decoration: none;
+        color: $text-color-primary;
+        border: none;
+        outline: none;
+        overflow: hidden;
+    }
+    
+    &__contact {
+        height: $chip-height;
+        width: $chip-height;
+        border-radius: $chip-height / 2;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 8px;
+        overflow: hidden;
+        text-align: center;
+        font-size: 18px;
+        line-height: 32px;
+    }
+    
+    &:focus {
+        outline: 0;
+        @include shadow-2dp();
+    }
+    
+    &:active {
+        background-color: $chip-bg-active-color;
+    }
+    
+    &--deletable {
+        padding-right: 4px;
+    }
+    
+    &--contact {
+        padding-left: 0;
+    }
+}

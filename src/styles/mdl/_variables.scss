@@ -1,0 +1,182 @@
+// Copyright 2015 Google Inc. All Rights Reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+// ------------------------------------
+// $CONTENTS
+// *------------------------------------
+//
+// STYLE GUIDE VARIABLES------------------
+// --- - -- - - - - -Declarations of Sass variables
+// -----Colors & Themes
+// -----Typography
+// -----Components
+// -----Textfield
+// -----Switch
+// -----Spinner
+// -----Radio
+// -----Menu
+// -----List
+// -----Layout
+// -----Icon toggles
+// -----Footer
+// -----Checkbox
+// -----Card
+// -----Button
+// -----Animation
+// -----Progress
+// -----Badge
+// -----Shadows
+// -----Grid
+// -----Data table
+// -----Dialog
+// -----Snackbar
+// -----Tooltip
+// -----Chip
+// Even though all variables have the `!default` directive, most of them
+// should not be changed as they are dependent on one another. This can cause
+// visual distortions (like alignment issues) that are hard to track down
+// and fix.
+
+@import "color-definitions";
+@import "functions";
+
+// ==========  Colors & Themes  ==========
+@import "z-variables/colors";
+
+
+
+// ==========  Typography  ==========
+//  Default font-faces &&& color-palette-dependent typography
+@import "z-variables/typography";
+
+
+
+// ==========  Images  ==========
+@import "z-variables/images";
+
+
+
+// ==========  Components  ==========
+// Imported in the order they were originally.
+@import "z-variables/components/components";
+
+
+
+// ==========  Text Field  ==========
+@import "z-variables/textfield";
+
+
+
+// ==========  Switch  ==========
+@import "z-variables/switch";
+
+
+
+// ==========  Spinner  ==========
+@import "z-variables/spinner";
+
+
+
+// ==========  Radio  ==========
+@import "z-variables/radio";
+
+
+
+// ==========  Menu  ==========
+@import "z-variables/menu";
+
+
+
+// ==========  List  ==========
+@import "z-variables/list";
+
+
+
+// ==========  Layout  ==========
+@import "z-variables/layout";
+
+
+
+// ==========  Icon Toggles  ==========
+@import "z-variables/icon-toggles";
+
+
+
+// ==========  Footer  ==========
+@import "z-variables/footer";
+
+
+
+// ==========  Checkbox  ==========
+@import "z-variables/checkbox";
+
+
+
+// ==========  Card  ==========
+@import "z-variables/card";
+
+
+
+// ==========  Button  ==========
+@import "z-variables/button";
+
+
+
+// ==========  Animation  ==========
+@import "z-variables/animation";
+
+
+
+// ==========  Progress  ==========
+@import "z-variables/progress";
+
+
+
+// ==========  Badge  ==========
+@import "z-variables/badge";
+
+
+
+// ==========  Shadows  ==========
+@import "z-variables/shadows";
+
+
+
+// ==========  Grid  ==========
+@import "z-variables/grid";
+
+
+
+// ==========  Data Table  ==========
+@import "z-variables/data-table";
+
+
+
+// ==========  Dialog  ==========
+@import "z-variables/dialog";
+
+
+
+// ==========  Snackbar  ==========
+@import "z-variables/snackbar";
+
+
+
+// ==========  Tooltip  ==========
+@import "z-variables/tooltip";
+
+
+
+// ==========  Chip  ==========
+@import "z-variables/chip";

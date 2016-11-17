@@ -1,0 +1,44 @@
+// ==========  Color & Themes  ==========
+@import "../color-definitions";
+// Define whether individual color palette items should have classes created.
+// Setting this to true will remove individual color classes for each color in the palettes.
+// To improve overall performance (assuming they aren't used) by:
+// * Saving server bandwidth sending the extra classes
+// * Save client computation against the classes
+// it is RECOMMENDED you set this to true.
+// JM VACO
+// Originally it was false.
+$trim-color-classes:          true !default;
+
+// Use color primarily for emphasis. Choose colors that fit with
+// your brand and provide good contrast between visual components.
+$color-primary:               $palette-blue-500 !default;
+$color-original-primary:      $palette-original-blue-500 !default;
+$color-primary-dark:          $palette-blue-700 !default;
+$color-primary-light:         $palette-blue-300 !default;
+$color-accent:                $palette-original-blue-500 !default;
+// $color-accent:                $palette-red-A200 !default;
+
+// Our primary is dark, so use $ color-dark-contrast for overlaid text.
+$color-primary-contrast:      $color-dark-contrast !default;
+// Our accent is dark, so use $ color-dark-contrast for overlaid text.
+$color-accent-contrast:       $color-dark-contrast !default;
+
+// Replace all colors with placeholders if we're generating a template.
+@if $styleguide-generate-template == true {
+  $color-primary:             '$color-primary';
+  $color-primary-dark:        '$color-primary-dark';
+  $color-primary-light:       '$color-primary-light';
+  $color-accent:              '$color-accent';
+  $color-primary-contrast:    '$color-primary-contrast';
+  $color-accent-contrast:     '$color-accent-contrast';
+  $color-original-blue:       '$color-original-primary';
+}
+
+// JM VACO
+// For colors outside of the palette
+$color-isabelline:            #eeeeee;
+$color-jet:                   #323232;
+$color-gainsboro:             #dedede;
+$color-light-gray:            #d6d6d6;
+$color-platinum:              #e0e0e0;

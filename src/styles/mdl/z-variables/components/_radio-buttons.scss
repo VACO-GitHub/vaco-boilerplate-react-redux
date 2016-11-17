@@ -1,0 +1,5 @@
+// ==========  Radio Buttons  ==========
+
+$radio-color:           unquote("rgb(#{$color-original-primary})") !default;
+$radio-off-color:       unquote("rgba(#{$color-black}, 0.54)") !default;
+$radio-disabled-color:  unquote("rgba(#{$color-black}, 0.26)") !default;

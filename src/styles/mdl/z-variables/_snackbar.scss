@@ -1,0 +1,10 @@
+// SNACKBAR
+
+// JM VACO
+// This below was in the docs, I replaced the hard-coded HEX value in _colors.scss
+//
+//
+// Hard coded since the color is not present in any palette.
+$snackbar-background-color:   $color-jet !default;
+$snackbar-tablet-breakpoint:  $grid-tablet-breakpoint;
+$snackbar-action-color:       unquote("rgb(#{$color-accent})") !default;

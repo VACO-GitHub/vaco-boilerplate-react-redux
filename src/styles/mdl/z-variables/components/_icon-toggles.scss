@@ -1,0 +1,7 @@
+// ==========  Icon Toggles  ==========
+
+$icon-toggle-color:                 unquote("rgb(#{$palette-grey-700})") !default;
+$icon-toggle-focus-color:           $button-focus-color !default;
+$icon-toggle-checked-color:         unquote("rgb(#{$color-primary})") !default;
+$icon-toggle-checked-focus-color:   unquote("rgba(#{$color-primary}, 0.26)") !default;
+$icon-toggle-disabled-color:        unquote("rgba(#{$color-black}, 0.26)") !default;

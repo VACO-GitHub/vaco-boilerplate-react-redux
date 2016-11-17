@@ -1,0 +1,8 @@
+// ==========  Spinner  ==========
+
+$spinner-color-1:       unquote("rgb(#{$palette-blue-400})") !default;
+$spinner-color-2:       unquote("rgb(#{$palette-red-500})") !default;
+$spinner-color-3:       unquote("rgb(#{$palette-yellow-600})") !default;
+$spinner-color-4:       unquote("rgb(#{$palette-green-500})") !default;
+
+$spinner-single-color:  unquote("rgb(#{$color-primary})") !default;
