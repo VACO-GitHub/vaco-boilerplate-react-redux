@@ -54,8 +54,8 @@ module.exports = {
       },
       // This works, for some reason....
       // {
-      //  test: /\.scss$/,
-      //  loaders: ['style', 'css', 'postcss', 'sass'],
+      // test: /\.scss$/,
+      // loaders: ['style', 'css', 'postcss', 'sass'],
       // },
       {
         test: /\.scss/,
@@ -66,7 +66,7 @@ module.exports = {
           'sass?outputStyle=expanded&sourceMap',
         ],
         include: path.join(__dirname, 'src/styles'),
-       },
+      },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
         loader: 'file',
