@@ -1,0 +1,40 @@
+////////// Desktop //////////
+
+@media (min-width: $grid-desktop-breakpoint) {
+  .mdl-grid {
+    padding: $grid-desktop-margin - ($grid-desktop-gutter / 2);
+  }
+
+  .mdl-cell {
+    margin: $grid-desktop-gutter / 2;
+    @include partial-size($grid-cell-default-columns, $grid-desktop-columns,
+        $grid-desktop-gutter);
+  }
+
+  .mdl-cell--hide-desktop {
+    display: none !important;
+  }
+
+  // Define order override classes.
+  @for $i from 1 through $grid-max-columns {
+    .mdl-cell--order-#{$i}-desktop.mdl-cell--order-#{$i}-desktop {
+      order: $i;
+    }
+  }
+
+  // Define partial sizes for all numbers of columns.
+  @for $i from 1 through $grid-desktop-columns {
+    .mdl-cell--#{$i}-col,
+    .mdl-cell--#{$i}-col-desktop.mdl-cell--#{$i}-col-desktop {
+      @include partial-size($i, $grid-desktop-columns, $grid-desktop-gutter);
+    }
+  }
+
+  // Define valid desktop offsets.
+  @for $i from 1 through ($grid-desktop-columns - 1) {
+    .mdl-cell--#{$i}-offset,
+    .mdl-cell--#{$i}-offset-desktop.mdl-cell--#{$i}-offset-desktop {
+      @include offset-size($i, $grid-desktop-columns, $grid-desktop-gutter);
+    }
+  }
+}

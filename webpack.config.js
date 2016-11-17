@@ -37,8 +37,12 @@ module.exports = {
       clear: false,
     }),
     new webpack.optimize.OccurenceOrderPlugin(),
+
+    // activates HMR
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
+
+    // allows you to create global constants which can be configured at compile time
     new webpack.DefinePlugin({
       __DEVELOPMENT__: true,
       __DEVTOOLS__: true,
@@ -50,13 +54,24 @@ module.exports = {
         test: /\.jsx?$/,
         loaders: ['react-hot', 'babel'],
         include: path.join(__dirname, 'src'),
-      }, {
+      },
+      {
         test: /\.json$/,
         loader: 'json',
-      }, {
+      },
+      {
         test: /\.css/,
         loaders: ['style', 'css'],
-      }, {
+      },
+      // SASS vendor files that do NOT need to be modularized.
+      {
+        test: /\.scss$/,
+        loaders: ['style', 'css', 'postcss', 'sass'],
+        exclude: [/node_modules/],
+        include: [path.join(__dirname, 'src/styles')],
+      },
+      // `styles` directory is ignored because those classnames must be specific & not hashed
+      {
         test: /\.scss/,
         loaders: [
           'style',
@@ -64,7 +79,9 @@ module.exports = {
           'postcss',
           'sass?outputStyle=expanded&sourceMap',
         ],
-      }, {
+        exclude: [path.join(__dirname, 'src/styles')],
+      },
+      {
         test: /\.(jpe?g|png|gif|svg)$/i,
         loader: 'file',
       },

@@ -1,0 +1,48 @@
+////////// Phone //////////
+
+@media (max-width: $grid-tablet-breakpoint - 1) {
+  .mdl-grid {
+    padding: $grid-phone-margin - ($grid-phone-gutter / 2);
+  }
+
+  .mdl-cell {
+    margin: $grid-phone-gutter / 2;
+    @include partial-size($grid-cell-default-columns, $grid-phone-columns,
+        $grid-phone-gutter);
+  }
+
+  .mdl-cell--hide-phone {
+    display: none !important;
+  }
+
+  // Define order override classes.
+  @for $i from 1 through $grid-max-columns {
+    .mdl-cell--order-#{$i}-phone.mdl-cell--order-#{$i}-phone {
+      order: $i;
+    }
+  }
+
+  // Define partial sizes for columnNumber < totalColumns.
+  @for $i from 1 through ($grid-phone-columns - 1) {
+    .mdl-cell--#{$i}-col,
+    .mdl-cell--#{$i}-col-phone.mdl-cell--#{$i}-col-phone {
+      @include partial-size($i, $grid-phone-columns, $grid-phone-gutter);
+    }
+  }
+
+  // Define 100% for everything else.
+  @for $i from $grid-phone-columns through $grid-desktop-columns {
+    .mdl-cell--#{$i}-col,
+    .mdl-cell--#{$i}-col-phone.mdl-cell--#{$i}-col-phone {
+      @include full-size($grid-phone-gutter);
+    }
+  }
+
+  // Define valid phone offsets.
+  @for $i from 1 through ($grid-phone-columns - 1) {
+    .mdl-cell--#{$i}-offset,
+    .mdl-cell--#{$i}-offset-phone.mdl-cell--#{$i}-offset-phone {
+      @include offset-size($i, $grid-phone-columns, $grid-phone-gutter);
+    }
+  }
+}

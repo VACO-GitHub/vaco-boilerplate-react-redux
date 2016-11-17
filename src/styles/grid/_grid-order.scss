@@ -1,0 +1,6 @@
+// Define order override classes.
+@for $i from 1 through $grid-max-columns {
+  .mdl-cell--order-#{$i} {
+    order: $i;
+  }
+}

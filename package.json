@@ -1,6 +1,6 @@
 {
   "name": "vaco-boilerplate-react-redux",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Boilerplate for V. Alexander multi-page applications featuring ReactJS with Redux, Webpack with hot module reloading and Mocha/Chai/Enzyme for testing!",
   "main": "node bin/server.dev.js",
   "repository": {
